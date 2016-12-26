@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MutantListComponent } from './mutant-list/mutant-list.component';
+import { MutantListService } from './mutant-list/mutant-list.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { MutantListComponent } from './mutant-list/mutant-list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MutantListService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

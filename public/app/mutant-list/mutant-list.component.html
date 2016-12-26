@@ -1,1 +1,18 @@
-<p>mutant-list works!</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="mutant-id">Id</th>
+      <th>Name</th>
+      <th class="mutant-icon">Icon</th>
+      <th>Power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mutant of mutants">
+      <td class="mutant-id"><span class="badge">{{mutant.id}}</span></td>
+      <td>{{mutant.name}}</td>
+      <td class="mutant-icon"><img src="assets/{{mutant.name}}.png"></td>
+      <td>{{mutant.power}}</td>
+    </tr>
+  </tbody>
+</table>
