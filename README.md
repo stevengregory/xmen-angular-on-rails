@@ -1,24 +1,35 @@
-# README
+# X-Men
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple app built on Angular 2 and Rails 5.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+1. Install [Node](http://nodejs.org)
 
-* System dependencies
+1. Install [Ruby](http://www.ruby-lang.org)
 
-* Configuration
+1. Install [Rails](http://rubyonrails.org)
 
-* Database creation
+## Getting Started
 
-* Database initialization
+1. Clone it `git clone https://github.com/stevengregory/x-men.git`
 
-* How to run the test suite
+1. Get in `cd x-men`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Installation
 
-* Deployment instructions
+1. Run `npm i`
 
-* ...
+1. Run `bundle install`
+
+## Rails DB Setup
+
+1. Run `rails db:migrate`
+
+1. Run `rails db:seed`
+
+## Running the Application
+
+1. Run `npm start`
+
+1. Navigate to [http://localhost:4200](http://localhost:4200/)
