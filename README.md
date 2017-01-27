@@ -1,6 +1,6 @@
-# X-Men
+# X-Men: Angular on Rails
 
-A simple app built on Angular 2 and Rails 5.
+A simple app built on Angular 2 and the Rails 5 API.
 
 ## Prerequisites
 
@@ -12,9 +12,9 @@ A simple app built on Angular 2 and Rails 5.
 
 ## Getting Started
 
-1. Clone it `git clone https://github.com/stevengregory/x-men.git`
+1. Clone it `git clone https://github.com/stevengregory/xmen-angular-on-rails.git`
 
-1. Get in `cd x-men`
+1. Get in `cd xmen-angular-on-rails`
 
 ## Installation
 
