@@ -1,7 +1,7 @@
 <table class="table table-striped">
-  <thead>
+  <thead class="thead-inverse">
     <tr>
-      <th class="mutant-id">Id</th>
+      <th class="mutant-id">#</th>
       <th>Name</th>
       <th class="mutant-icon">Icon</th>
       <th>Power</th>
@@ -9,9 +9,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let mutant of mutants">
-      <td class="mutant-id"><span class="badge">{{mutant.id}}</span></td>
+      <th scope="row" class="mutant-id">{{mutant.id}}</th>
       <td>{{mutant.name}}</td>
-      <td class="mutant-icon"><img src="assets/{{mutant.name}}.png"></td>
+      <td class="mutant-icon"><img src="assets/{{mutant.name | lowercase}}.png"></td>
       <td>{{mutant.power}}</td>
     </tr>
   </tbody>

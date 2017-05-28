@@ -1,6 +1,6 @@
 # X-Men: Angular on Rails
 
-A simple app built on Angular 2 and the Rails 5 API.
+A simple app built on Angular and the Rails 5 API.
 
 ## Prerequisites
 

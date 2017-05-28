@@ -1,5 +1,5 @@
 .table {
-  color: #666;
+  color: #292b2c;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   max-width: 100%;
@@ -14,20 +14,19 @@
       margin-left: -45px;
     }
   }
-  > thead > tr > th,
-  > tbody > tr > th,
-  > tfoot > tr > th,
-  > thead > tr > td,
-  > tbody > tr > td,
-  > tfoot > tr > td {
+  >thead>tr>th,
+  >tbody>tr>th,
+  >tfoot>tr>th,
+  >thead>tr>td,
+  >tbody>tr>td,
+  >tfoot>tr>td {
     border-bottom: 1px solid #ddd;
     line-height: 2;
     padding: 10px;
     vertical-align: top;
   }
-  > thead > tr > th {
-    border-bottom: 2px solid #ddd;
-    font-size: 17px;
+  >thead>tr>th {
+    font-size: 18px;
     text-align: left;
   }
 }

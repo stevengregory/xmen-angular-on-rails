@@ -1,6 +1,6 @@
 import { MutantPage } from './app.po';
 
-describe('mutant App', function() {
+describe('Mutant App', () => {
   let page: MutantPage;
 
   beforeEach(() => {
