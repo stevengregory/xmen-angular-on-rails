@@ -31,5 +31,3 @@ A simple app built on Angular and the Rails 5 API.
 ## Running the Application
 
 1. Run `npm start`
-
-1. Navigate to [http://localhost:4200](http://localhost:4200/)
