@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, Response } from '@angular/http';
-
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 import { Mutant } from './mutant';
 
@@ -12,15 +9,16 @@ import { Mutant } from './mutant';
 export class MutantListService {
   private apiUrl = 'http://localhost:3000/mutants';
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
-  getMutants(): Observable<Mutant[]> {
+  getMutants() {
     return this.http
-      .get(this.apiUrl)
-      .map((res: Response) => res.json() as Mutant[])
-      .catch((error: any) => {
-        console.error('Magneto has caused an error', error);
-        return Observable.throw(error.message || error);
-      });
+      .get<Mutant[]>(this.apiUrl)
+      .pipe(map(res => res), catchError(this.handleError));
+  }
+
+  private handleError(res: HttpErrorResponse) {
+    console.error(res.error);
+    return Observable.throw(res.error || 'Server error');
   }
 }

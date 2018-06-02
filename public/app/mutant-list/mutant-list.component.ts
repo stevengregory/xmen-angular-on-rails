@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { MutantListService } from './mutant-list.service';
 import { Mutant } from './mutant';
@@ -11,11 +11,14 @@ import { Mutant } from './mutant';
 })
 export class MutantListComponent implements OnInit {
   mutants: Mutant[] = [];
-  error: any;
 
   constructor(private mutantListService: MutantListService) {}
 
   ngOnInit(): void {
+    this.getMutants();
+  }
+
+  getMutants() {
     this.mutantListService
       .getMutants()
       .subscribe((data: any) => this.mutants = data,

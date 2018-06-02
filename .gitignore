@@ -46,13 +46,10 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
 /typings
-yarn-error.log
-
-# e2e
-/e2e/*.js
-/e2e/*.map
+/vendor
 
 # System Files
 .DS_Store
