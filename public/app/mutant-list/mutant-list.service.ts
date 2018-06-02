@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
-import { Mutant } from './mutant';
+import { Mutant } from '../core';
 
 @Injectable()
 export class MutantListService {
