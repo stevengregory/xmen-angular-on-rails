@@ -1,10 +1,14 @@
 # X-Men: Angular on Rails
 
-A simple app built on Angular and the Rails 5 API.
+This project provides a simple look at getting started using Angular and Ruby on Rails together. The app simply fetches and displays a list of heroes from a Rails API with seed data. The Angular CLI is used to build the front-end of the application.
+
+![X-Men: Angular on Rails](https://i.imgur.com/JXAjZLl.png)
 
 ## Prerequisites
 
 1. Install [Node](http://nodejs.org)
+
+1. Install [Angular CLI](https://cli.angular.io)
 
 1. Install [Ruby](http://www.ruby-lang.org)
 
