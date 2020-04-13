@@ -4,15 +4,39 @@
   "newProjectRoot": "projects",
   "projects": {
     "mutant": {
-      "root": "",
-      "sourceRoot": "public",
       "projectType": "application",
-      "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
+      "root": "",
+      "sourceRoot": "public",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -21,14 +45,14 @@
             "index": "public/index.html",
             "main": "public/main.ts",
             "polyfills": "public/polyfills.ts",
-            "tsConfig": "public/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               "public/favicon.ico",
               "public/assets"
             ],
             "styles": [
-              "public/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.css"
+              "public/styles.scss"
             ],
             "scripts": []
           },
@@ -45,10 +69,21 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -68,65 +103,8 @@
           "options": {
             "browserTarget": "mutant:build"
           }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "public/test.ts",
-            "polyfills": "public/polyfills.ts",
-            "tsConfig": "public/tsconfig.spec.json",
-            "karmaConfig": "public/karma.conf.js",
-            "styles": [
-              "public/styles.scss"
-            ],
-            "scripts": [],
-            "assets": [
-              "public/favicon.ico",
-              "public/assets"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "public/tsconfig.app.json",
-              "public/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
-    },
-    "mutant-e2e": {
-      "root": "e2e/",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mutant:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "mutant:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }
-  },
+    }},
   "defaultProject": "mutant"
 }

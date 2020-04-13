@@ -1,34 +1,18 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Ignore bundler config
-/.bundle
-
-# Ignore the default SQLite database
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
-# Ignore all logfiles and tempfiles
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
-
-# Ignore uploaded files in development
-/storage/*
-
-# Ignore Byebug command history file
-.byebug_history
-
-# Ignore master key for decrypting credentials and more
-/config/master.key
-
 # compiled output
 /dist
 /tmp
 /out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
 # dependencies
 /node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
 # IDEs and editors
 /.idea
@@ -45,6 +29,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.history/*
 
 # misc
 /.sass-cache
@@ -55,7 +40,6 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-/vendor
 
 # System Files
 .DS_Store
