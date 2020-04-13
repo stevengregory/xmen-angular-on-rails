@@ -14,6 +14,6 @@ export class MutantListService {
   getMutants() {
     return this.http
       .get<Observable<Mutant[]>>(this.apiUrl)
-      .pipe(map(res => res));
+      .pipe(map((res) => res));
   }
 }

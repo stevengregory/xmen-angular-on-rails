@@ -9,10 +9,12 @@
   </thead>
   <tbody>
     <tr *ngFor="let mutant of mutants">
-      <th scope="row" class="mutant-id">{{mutant.id}}</th>
-      <td>{{mutant.name}}</td>
-      <td class="mutant-icon"><img src="assets/{{mutant.name | lowercase}}.png"></td>
-      <td>{{mutant.power}}</td>
+      <th scope="row" class="mutant-id">{{ mutant.id }}</th>
+      <td>{{ mutant.name }}</td>
+      <td class="mutant-icon">
+        <img src="assets/{{ mutant.name | lowercase }}.png" />
+      </td>
+      <td>{{ mutant.power }}</td>
     </tr>
   </tbody>
 </table>

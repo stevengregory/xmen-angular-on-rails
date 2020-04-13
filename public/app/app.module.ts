@@ -7,14 +7,8 @@ import { MutantListComponent } from './mutant-list/mutant-list.component';
 import { MutantListService } from './mutant-list/mutant-list.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MutantListComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
+  declarations: [AppComponent, MutantListComponent],
+  imports: [BrowserModule, HttpClientModule],
   providers: [MutantListService],
   bootstrap: [AppComponent]
 })
