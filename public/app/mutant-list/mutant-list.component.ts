@@ -21,6 +21,6 @@ export class MutantListComponent implements OnInit {
   getMutants() {
     this.mutantListService
       .getMutants()
-      .subscribe(mutants => (this.mutants = mutants), error => console.log(error));
+      .subscribe(mutants => (this.mutants = mutants));
   }
 }
