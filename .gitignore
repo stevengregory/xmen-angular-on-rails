@@ -26,6 +26,8 @@
 /dist
 /tmp
 /out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
 # dependencies
 /node_modules
@@ -45,6 +47,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.history/*
 
 # misc
 /.sass-cache
@@ -56,6 +59,10 @@ yarn-error.log
 testem.log
 /typings
 /vendor
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
 # System Files
 .DS_Store
