@@ -13,7 +13,7 @@ export class MutantListService {
 
   getMutants() {
     return this.http
-      .get<Mutant[]>(this.apiUrl)
+      .get<Observable<Mutant[]>>(this.apiUrl)
       .pipe(map(res => res), catchError(this.handleError));
   }
 

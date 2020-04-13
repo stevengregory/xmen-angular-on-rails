@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Mutant } from '../core';
 import { MutantListService } from './mutant-list.service';
@@ -9,7 +10,7 @@ import { MutantListService } from './mutant-list.service';
   styleUrls: ['./mutant-list.component.scss']
 })
 export class MutantListComponent implements OnInit {
-  mutants: Mutant[];
+  mutants: Observable<Mutant[]>;
 
   constructor(private mutantListService: MutantListService) {}
 
